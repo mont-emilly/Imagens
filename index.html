@@ -13,8 +13,8 @@
       --card: #FFFFFF;
       --text-primary: #1A1A1A;
       --text-secondary: #6B6B6B;
-      --accent: #7B1034;
-      --accent-light: #E8F0FE;
+      --accent: #6B1B1B;
+      --accent-light: #F9EEEE;
       --divider: #EBEBEB;
       --shadow: 0 2px 16px rgba(0,0,0,0.07);
       --radius: 20px;
@@ -30,15 +30,9 @@
       padding: 2rem 1rem;
     }
 
-    .container {
-      width: 100%;
-      max-width: 380px;
-    }
+    .container { width: 100%; max-width: 380px; }
 
-    .header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+    .header { text-align: center; margin-bottom: 2rem; }
 
     .header-icon {
       width: 56px;
@@ -51,25 +45,10 @@
       margin-bottom: 1rem;
     }
 
-    .header h1 {
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--text-primary);
-      letter-spacing: -0.3px;
-    }
+    .header h1 { font-size: 22px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.3px; }
+    .header p { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
 
-    .header p {
-      font-size: 14px;
-      color: var(--text-secondary);
-      margin-top: 4px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
 
     .phone-item {
       display: flex;
@@ -83,13 +62,8 @@
       cursor: pointer;
     }
 
-    .phone-item:active {
-      background: var(--accent-light);
-    }
-
-    .phone-item + .phone-item {
-      border-top: 1px solid var(--divider);
-    }
+    .phone-item:active { background: var(--accent-light); }
+    .phone-item + .phone-item { border-top: 1px solid var(--divider); }
 
     .icon-wrap {
       width: 44px;
@@ -103,57 +77,18 @@
       transition: background 0.15s ease;
     }
 
-    .phone-item:active .icon-wrap {
-      background: var(--accent);
-    }
+    .phone-item:active .icon-wrap { background: var(--accent); }
+    .phone-item:active .icon-wrap svg { stroke: white; }
 
-    .phone-item:active .icon-wrap svg {
-      stroke: white;
-    }
+    .icon-wrap svg { width: 20px; height: 20px; stroke: var(--accent); transition: stroke 0.15s ease; }
 
-    .icon-wrap svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--accent);
-      transition: stroke 0.15s ease;
-    }
+    .info { flex: 1; }
+    .info-label { font-size: 12px; color: var(--text-secondary); font-weight: 400; margin-bottom: 2px; }
+    .info-number { font-family: 'DM Mono', monospace; font-size: 18px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.5px; }
+    .info-number.large { font-size: 22px; }
 
-    .info {
-      flex: 1;
-    }
-
-    .info-label {
-      font-size: 12px;
-      color: var(--text-secondary);
-      font-weight: 400;
-      margin-bottom: 2px;
-    }
-
-    .info-number {
-      font-family: 'DM Mono', monospace;
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--text-primary);
-      letter-spacing: -0.5px;
-    }
-
-    .info-number.large {
-      font-size: 22px;
-    }
-
-    .arrow {
-      color: var(--text-secondary);
-      opacity: 0.4;
-      flex-shrink: 0;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 1.5rem;
-      font-size: 12px;
-      color: var(--text-secondary);
-      opacity: 0.7;
-    }
+    .arrow { color: var(--text-secondary); opacity: 0.4; flex-shrink: 0; }
+    .footer { text-align: center; margin-top: 1.5rem; font-size: 12px; color: var(--text-secondary); opacity: 0.7; }
 
     @media (prefers-color-scheme: dark) {
       :root {
@@ -161,8 +96,8 @@
         --card: #1E1E1E;
         --text-primary: #F0F0F0;
         --text-secondary: #888888;
-        --accent: #4A90E2;
-        --accent-light: #1A2A3A;
+        --accent: #A63030;
+        --accent-light: #2A1515;
         --divider: #2A2A2A;
         --shadow: 0 2px 16px rgba(0,0,0,0.3);
       }
@@ -170,9 +105,7 @@
   </style>
 </head>
 <body>
-
   <div class="container">
-
     <div class="header">
       <div class="header-icon">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -184,7 +117,6 @@
     </div>
 
     <div class="card">
-
       <a class="phone-item" href="tel:136">
         <div class="icon-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -223,12 +155,9 @@
         </div>
         <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </a>
-
     </div>
 
     <div class="footer">Toque no número para ligar</div>
-
   </div>
-
 </body>
 </html>
